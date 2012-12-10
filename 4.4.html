@@ -1,0 +1,67 @@
+<html><head><title>Rollover Composers</title>
+<script type='text/javascript' language='Javascript'>
+<!--
+var greatcomposersON = new Image;
+var bachON = new Image;
+var mozartON = new Image;
+var beethovenON = new Image;
+
+var greatcomposersOFF = new Image;
+var bachOFF = new Image;
+var mozartOFF = new Image;
+var beethovenOFF = new Image;
+
+greatcomposersON.src = "images/greatcomposerson.jpg";
+bachON.src = "images/bachon.jpg";
+mozartON.src = "images/mozarton.jpg";
+beethovenON.src = "images/beethovenon.jpg";
+
+greatcomposersOFF.src = "images/greatcomposersoff.jpg";
+bachOFF.src = "images/bachoff.jpg";
+mozartOFF.src = "images/mozartoff.jpg";
+beethovenOFF.src = "images/beethovenoff.jpg";
+
+function swapImage(version, imagename){
+    if (document.images){
+        document[imagename].src = eval(imagename + version + ".src");
+    }
+}
+
+
+function rollOffAll(){
+    swapImage('OFF','greatcomposers');
+    swapImage('OFF','bach');
+    swapImage('OFF','mozart');
+    swapImage('OFF','beethoven');
+}
+//-->
+</script>
+</head>
+<body bgcolor="white">
+<div align="center">
+<a href="greatcomposers.html" onmouseover=
+"swapImage('ON','greatcomposers');" onmouseout="rollOffAll();"
+onclick="rollOffAll();return true;"><img src=
+"images/greatcomposersoff.jpg" width="250" height="40" name=
+"greatcomposers" border="0" alt="Great Composers"></a> 
+
+<hr>
+<br>
+<a href="bach.html" onmouseover="swapImage('ON','bach');"
+onmouseout="rollOffAll();" onclick="rollOffAll();return true;"><img
+src="images/bachoff.jpg" width="250" height="70" name="bach"
+border="0" alt="Bach"></a><br>
+
+<a href="mozart.html" onmouseover="swapImage('ON','mozart');"
+onmouseout="rollOffAll();" onclick="rollOffAll();return true;"><img
+src="images/mozartoff.jpg" width="250" height="70" name="mozart"
+border="0" alt="Mozart"></a><br>
+
+<a href="beethoven.html" onmouseover="swapImage('ON','beethoven');"
+onmouseout="rollOffAll();" onclick="rollOffAll();return true;"><img
+src="images/beethovenoff.jpg" width="250" height="70" name=
+"beethoven" border="0" alt="Beethoven"></a><br>
+
+</div>
+</body>
+</html>
